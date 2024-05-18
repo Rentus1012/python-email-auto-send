@@ -3,6 +3,12 @@
 # 이메일 전송할때 사용되는 프로토콜은 smtp 이며, 특히나 지메일은 보안상의 이유로 TLS 보안을 사용한다.
 
 
+# 주의: :39의 코드를 실행하면 실제로 전송이 됩니다. 사용자가 실행하실때는 사용자에 맞게 전송하시길 바랍니다.
+
+
+
+
+
 import smtplib
 
 from email.mime.text import MIMEText
@@ -28,6 +34,7 @@ msg = MIMEText('내용: 본문 내용 텍스트 입니다. 테스트 중입니�
 # 제목 코드입니다.
 msg['Subject'] = '제목: 메일 보내기 테스트입니다.'
 
+# seunghoon.no.1@gmail.com 에서 ilgu4193@gmail.com 로 메시지를 하나 보낸다.
 s.sendmail('seunghoon.no.1@gmail.com','ilgu4193@gmail.com', msg.as_string())
 
 s.quit()
