@@ -23,8 +23,9 @@ s.starttls()
 # 비밀번호는 계정 비밀 번호를 쓰면 안돼고, 앱 비밀번호를 만들어서 코드를 작성해야 한다..
 s.login('seunghoon.no.1@gmail.com','fmerobepqjdttbot')
 
-
+# :27 은 본문 작성 코드 입니다.
 msg = MIMEText('내용: 본문 내용 텍스트 입니다. 테스트 중입니다.')
+# 제목 코드입니다.
 msg['Subject'] = '제목: 메일 보내기 테스트입니다.'
 
 s.sendmail('seunghoon.no.1@gmail.com','ilgu4193@gmail.com', msg.as_string())
